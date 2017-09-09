@@ -58,14 +58,6 @@ public class WidgetAdmin extends ReceiverAutostart {
         if (INTENT_ON.equals(intent.getAction()) || INTENT_OFF.equals(intent.getAction()))
             am.cancel(pi);
 
-        // Vibrate
-        Vibrator vs = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        if (vs.hasVibrator())
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-                vs.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE));
-            else
-                vs.vibrate(50);
-
         try {
             if (INTENT_ON.equals(intent.getAction()) || INTENT_OFF.equals(intent.getAction())) {
                 boolean enabled = INTENT_ON.equals(intent.getAction());

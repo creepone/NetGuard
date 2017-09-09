@@ -17,7 +17,7 @@
         android:name="eu.faircode.netguard.permission.ADMIN"
         android:description="@string/app_description"
         android:label="@string/app_name"
-        android:protectionLevel="signature" />
+        android:protectionLevel="dangerous" />
 
     <uses-permission android:name="eu.faircode.netguard.permission.ADMIN" />
 
